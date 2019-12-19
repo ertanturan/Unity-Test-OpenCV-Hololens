@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HoloLensWithOpenCVForUnityExample/ShowLicense.unity
     guid: ae54b3be70768f64e9b1a300c7cdeff9
+  - enabled: 1
+    path: Assets/HoloLensWithOpenCVForUnityExample/HoloLensPhotoCaptureExample/HoloLensPhotoCaptureExample.unity
+    guid: e89ceb2c24c45d844b87c3e07cd240dc
+  - enabled: 1
+    path: Assets/HoloLensWithOpenCVForUnityExample/HoloLensComicFilterExample/HoloLensComicFilterExample.unity
+    guid: e1c01ca879ef2ae44b6980a83cc01c75
   m_configObjects: {}
