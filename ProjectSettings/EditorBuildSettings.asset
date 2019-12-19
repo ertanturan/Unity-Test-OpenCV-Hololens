@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HoloLensWithOpenCVForUnityExample/HoloLensWithOpenCVForUnityExample.unity
+    guid: 3a58626d3c947ef4e9c22d0f4a104715
+  - enabled: 1
+    path: Assets/HoloLensWithOpenCVForUnityExample/ShowLicense.unity
+    guid: ae54b3be70768f64e9b1a300c7cdeff9
   m_configObjects: {}
