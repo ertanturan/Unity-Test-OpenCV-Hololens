@@ -3,7 +3,7 @@ using HoloLensCameraStream;
 using System;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.VR.WSA.Input;
+
 
 /// <summary>
 /// In this example, we back-project to the 3D world 5 pixels, which are the principal point and the image corners,
@@ -24,7 +24,7 @@ public class ProjectionExample : MonoBehaviour {
     private IntPtr _spatialCoordinateSystemPtr;
     private byte[] _latestImageBytes;
     private bool stopVideo;
-    private GestureRecognizer _gestureRecognizer;
+    private UnityEngine.XR.WSA.Input.GestureRecognizer _gestureRecognizer;
 
     // Frame gameobject, renderer and texture
     private GameObject _picture;
@@ -43,16 +43,16 @@ public class ProjectionExample : MonoBehaviour {
     void Awake()
     {
         // Create and set the gesture recognizer
-        _gestureRecognizer = new GestureRecognizer();
+        _gestureRecognizer = new UnityEngine.XR.WSA.Input.GestureRecognizer();
         _gestureRecognizer.TappedEvent += (source, tapCount, headRay) => { Debug.Log("Tapped"); StartCoroutine(StopVideoMode()); };
-        _gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
+        _gestureRecognizer.SetRecognizableGestures(UnityEngine.XR.WSA.Input.GestureSettings.Tap);
         _gestureRecognizer.StartCapturingGestures();
     }
 
 	void Start() 
     {
         //Fetch a pointer to Unity's spatial coordinate system if you need pixel mapping
-        _spatialCoordinateSystemPtr = UnityEngine.VR.WSA.WorldManager.GetNativeISpatialCoordinateSystemPtr();
+        _spatialCoordinateSystemPtr = UnityEngine.XR.WSA.WorldManager.GetNativeISpatialCoordinateSystemPtr();
 	    CameraStreamHelper.Instance.GetVideoCaptureAsync(OnVideoCaptureCreated);
 
         // Create the frame container and apply HolographicImageBlend shader
